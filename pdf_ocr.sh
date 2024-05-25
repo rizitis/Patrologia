@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Anagnostakis Ioannis (aka rizitis) 25/05/2024
+# LICENSE MIT (https://opensource.org/license/mit)
+
 # Function to convert folder name into a Unix-friendly format
 convert_folder_name() {
     # Remove spaces and replace commas with underscores
