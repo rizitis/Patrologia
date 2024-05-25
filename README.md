@@ -37,6 +37,7 @@ your_main_patrologia_folder/subdolfers/*.pdf (files)
 your_main_patrologia_folder/subdolfers/*.pdf (files)
 ├── combine_texts.py
 ├── pdf_ocr.sh
+|── output_images
 └── ocr_texts/
     ├── subdir1/
     │   ├── file1.txt
