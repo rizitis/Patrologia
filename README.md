@@ -32,7 +32,7 @@ your_main_patrologia_folder/subdolfers/*.pdf (files)
 3. `./pdf_ocr.sh`
 
 
-4. After few hours output will be like this:
+4. After few hours (thanks to GNU Parallel) output will be like this:
 ```
 your_main_patrologia_folder/subdolfers/*.pdf (files)
 ├── combine_texts.py
@@ -54,3 +54,7 @@ files.txt is what you need....
 
 # NOTE
 This script is not working if locally you dont manuall fix folders path as step 1 discribe.  
+
+#  GNU Parallel
+This project use  GNU Parallel for faster scripts support! 
+Enhance the efficiency of your scientific work by using GNU Parallel for parallel data processing. We kindly request that you acknowledge GNU Parallel in your publications, citing the version number (GNU Parallel 20240522), release date (May 22, 2024), and the DOI link provided on Zenodo (https://doi.org/10.5281/zenodo.11247979). This will contribute to further development of GNU Parallel and support the scientific community.
