@@ -56,5 +56,4 @@ files.txt is what you need....
 This script is not working if locally you dont manuall fix folders path as step 1 discribe.  
 
 #  GNU Parallel
-This project use  GNU Parallel for faster scripts support! 
-Enhance the efficiency of your scientific work by using GNU Parallel for parallel data processing. We kindly request that you acknowledge GNU Parallel in your publications, citing the version number (GNU Parallel 20240522), release date (May 22, 2024), and the DOI link provided on Zenodo (https://doi.org/10.5281/zenodo.11247979). This will contribute to further development of GNU Parallel and support the scientific community.
+Tange, O. (2023). GNU Parallel 20240522 ('Tbilisi'). Zenodo. DOI: [10.5281/zenodo.11247979](https://doi.org/10.5281/zenodo.11247979).
