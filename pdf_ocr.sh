@@ -26,13 +26,12 @@ convert_to_png() {
 # Function to perform OCR on PNG images
 perform_ocr() {
     local dir="$1"
-    local output_dir="ocr_texts/$(convert_folder_name "$(basename "$dir")")"
-
-    mkdir -p "$output_dir"
 
     # Perform OCR on PNG images in parallel
-    parallel --bar -j "$NUM_CORES" tesseract {} "$output_dir"/"{/.}" -l grc+lat ::: "output_images/$dir"/*.png
+    parallel --bar -j "$NUM_CORES" tesseract {} "{.}" -l grc+lat ::: "$dir"/*.png
 }
+
+
 
 # Main script
 
@@ -44,25 +43,25 @@ echo "Working directory: $WDIR"
 mkdir -p output_images
 
 # Convert PDF files to PNG images in parallel
-find . -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
-    convert_to_png "$dir"
-done
+#find . -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
+#    convert_to_png "$dir"
+#done
 
 # Wait for PDF to PNG conversion to complete
-wait
+#wait
 
 # Check if conversion to PNG was successful
-if [ $? -ne 0 ]; then
-    echo "Error: PDF to PNG conversion failed."
-    exit 1
-fi
+#if [ $? -ne 0 ]; then
+#    echo "Error: PDF to PNG conversion failed."
+#    exit 1
+#fi
 
 echo "PDF to PNG conversion complete."
 
 # Create the ocr_texts directory if it does not exist
 mkdir -p ocr_texts
 
-# Perform OCR on PNG images in parallel
+# Perform OCR on PNG images in each subdirectory of output_images
 find output_images -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
     perform_ocr "$dir"
 done
