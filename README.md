@@ -22,7 +22,6 @@ your_main_patrologia_folder/subdolfers/*.pdf (files)
 ```
 
 files.txt is what you need....
-This folders exist here because build need 3 days on 20 cores cpu 64Gi ram...
 
 
 # NOTE
