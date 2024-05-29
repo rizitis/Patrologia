@@ -1,23 +1,3 @@
-# Patrologia
-
-
-## Requires: 
-In a full Slackware installation just install from SBo
-
-```
-tesseract
-```
-then 
-`cd /usr/share/tessdata`
-`sudo wget -c https://github.com/tesseract-ocr/tessdata/raw/4.00/grc.traineddata`
-`sudo wget -c https://github.com/tesseract-ocr/tessdata/raw/4.00/lat.traineddata`
-
-For custom Slackware installation ensure you have:
-```
-poppler
-poppler-data
-```
-
 ## Convert Patrologia 
 1. Be sure the path is like this:
 
@@ -32,24 +12,17 @@ your_main_patrologia_folder/subdolfers/*.pdf (files)
 3. `./pdf_ocr.sh`
 
 
-4. After few hours (thanks to GNU Parallel) output will be like this:
+4. After few days (thanks to GNU Parallel) output will be like this:
 ```
 your_main_patrologia_folder/subdolfers/*.pdf (files)
 ├── combine_texts.py
 ├── pdf_ocr.sh
 |── output_images/subdirs/*.png
-└── ocr_texts/
-    ├── subdir1/
-    │   ├── file1.txt
-    │   └── file2.txt
-    ├── subdir2/
-    │   ├── file3.txt
-    │   └── file4.txt
-    └── ...
+|── final_texts/*.txt files
 ```
 
 files.txt is what you need....
-
+This folders exist here because build need 3 days on 20 cores cpu 64Gi ram...
 
 
 # NOTE
